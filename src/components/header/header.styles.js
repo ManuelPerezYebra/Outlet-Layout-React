@@ -10,6 +10,7 @@ const StyledHeader = styled.div`
 	margin-left: 55px;
 	align-items: center;
 `;
+
 const StyledNav = styled.nav`
 	display: flex;
 	gap: 50px;
@@ -31,11 +32,12 @@ const StyledNav = styled.nav`
 		position: absolute;
 		opacity: 0.4;
 		filter: blur(2px);
-		width: 45vwpx;
+		width: 45vw;
 		height: 96px;
 		z-index: -1;
 	}
 `;
+
 const StyledLink = styled(Link)`
 	align-items: center;
 	gap: 14px;
@@ -43,9 +45,9 @@ const StyledLink = styled(Link)`
 	cursor: pointer;
 	color: white;
 	padding: 40px 0px 40px 0px;
-
-	border-bottom: 4px solid white;
+	border-bottom: ${({ active }) => (active ? '4px solid white' : 'none')};
 `;
+
 const StyledHr = styled.hr`
 	position: absolute;
 	opacity: 0.2;
@@ -54,4 +56,5 @@ const StyledHr = styled.hr`
 	left: -70%;
 	width: 35vw;
 `;
+
 export { StyledHeader, StyledNav, StyledLink, StyledHr };
